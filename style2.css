@@ -1,0 +1,141 @@
+/* Core Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+/* Header Showcase */
+#showcase {
+  min-height: 400px;
+  color: #fff;
+  text-align: center;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: #333 url('https://i.redd.it/z71e8oez27121.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+#showcase h1 {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap,
+#section-b .content-wrap,
+#section-c .content-wrap {
+  padding: 0 1.5em;
+}
+
+/* Section B */
+#section-b {
+  padding: 2em 1em 1em;
+}
+
+#section-b ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#section-b .card-content {
+  margin-bottom: 1em;
+  background: #fff;
+  color: #333;
+}
+
+/* Section C */
+#section-c ul {
+  display: flex;
+  margin: 0;
+  padding: 15px;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#section-c a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Footer */
+#main-footer {
+  padding: 2em;
+  background: #000;
+}
+
+#main-footer a {
+  color: #2690d4;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media(min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .content-wrap {
+    grid-column: 2/4;
+  }
+
+  /* Nested Grid */
+  #section-b ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #section-b ul li {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #section-b li {
+    width: 95%;
+  }
+
+  figcaption {
+    text-align: center;
+    padding: 1em;
+  }
+
+  /* Social Media Links at the bottom */
+    #section-c ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+
+}
